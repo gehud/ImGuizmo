@@ -1,7 +1,25 @@
 project(ImGuizmo VERSION 1.0.0 LANGUAGES CXX)
 
-file(GLOB_RECURSE IMGIZMO_HEADER_FILES *.h)
-file(GLOB_RECURSE IMGIZMO_SOURCE_FILES *.cpp)
+file(
+	GLOB_RECURSE 
+	IMGIZMO_HEADER_FILES
+	GraphEditor.h
+	ImCurveEdit.h
+	ImGradient.h
+	ImGuizmo.h
+	ImSequencer.h
+	ImZoomSlider.h
+)
+
+file(
+	GLOB_RECURSE 
+	IMGIZMO_SOURCE_FILES
+	GraphEditor.cpp
+	ImCurveEdit.cpp
+	ImGradient.cpp
+	ImGuizmo.cpp
+	ImSequencer.cpp
+)
 
 add_library(${PROJECT_NAME} STATIC
     ${IMGIZMO_HEADER_FILES}
